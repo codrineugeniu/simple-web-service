@@ -37,6 +37,11 @@ app.use(function (error, req, res, next) {
 })
 
 app.get('/', function(req, res) {
+    var result = getShows(req.body);
+    res.json(200, { response: result } );
+});
+
+app.post('/', function(req, res) {
 
     var result = getShows(req.body);
     res.json(200, { response: result } );
