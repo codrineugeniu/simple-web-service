@@ -39,7 +39,7 @@ app.use(function (error, req, res, next) {
 app.get('/', function(req, res) {
 
     var result = getShows(req.body);
-    res.json( { response: result } );
+    res.json(200, { response: result } );
 });
 
 var port = Number(process.env.PORT || 5000);
